@@ -1,7 +1,7 @@
 <!-- Loop segmentos -->
 
 <?php 
-$the_segmentos = new Wp_Query(array(
+$the_segmentos = new WP_Query(array(
 		'post_type'   	 => 'rcnet_segmentos',
 		'post_not_in' 	 => array(get_the_id()),
 		'posts_per_page' => 3
@@ -27,15 +27,15 @@ $id= get_the_id();
 ?>
                     </div>
     				<div class="col-sm-9 col-md-9 col-lg-9 col-xs-9 pull-right">
-    					<h3><a href="<?php echo get_post_type_archive_link( 'rcnet_segmentos' ); ?>"><?php the_title(); ?></a></h3>
+    					<h3><a href="<?php echo get_post_type_archive_link( 'rcnet_segmentos' ); ?>"><?php the_title(); ?> <br><span><?php echo get_post_meta( get_the_ID(), 'segmentos-subtitulo', true); ?></span></a></h3>
     				</div>
     			</figure>
     		</div>
     	</article><!--Segmentos RCNET-->
-<?php 
-	wp_reset_postdata();
+<?php 	
 	endwhile;
 ?>
 
 <?php endif; ?>
+<?php wp_reset_postdata(); ?>
 

@@ -40,7 +40,3 @@ require_once($functions_path . 'wp_bootstrap_navwalker.php');
 // require_once($functions_path . 'shortcodes.php');
 // require_once($functions_path . 'social.php');
 
- register_nav_menus( array(
-    'primary' => __( 'Primary Menu', 'rcnet' ),
-    'second' => __( 'Second Menu', 'rcnet' ),
-) );

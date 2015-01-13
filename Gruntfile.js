@@ -66,19 +66,19 @@ module.exports = function(grunt){
 			}
 		},//sass(scss)
 
-
-
 });
 
 	//Carregar plugins
 
 	// grunt.loadNpmTasks('grunt-contrib-uglify');
 	// grunt.loadNpmTasks('grunt-contrib-sass');
+	
 
 
 	//registrando tarefas
 
 	grunt.registerTask( 'default', [ 'watch' ] ); 
+	
 
 
 };

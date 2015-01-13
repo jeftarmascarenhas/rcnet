@@ -6,19 +6,8 @@
  */
 ?>
 
-<?php 
-			// WP_Query arguments
-$args = array (
-	'page_id'                => '8',
-	'pagename'               => 'Quem Somos',
-);
 
-// The Query
-$query = new WP_Query( $args );
-
-?>
-
- <?php if( $query -> have_posts() ): while( $query -> have_posts() ) : $query -> the_post(); ?>
+ <?php if( have_posts() ): while( have_posts() ) : the_post(); ?>
 		
 		<h1><?php the_title(); ?></h1>
 		 <p><?php the_content(); ?></p>

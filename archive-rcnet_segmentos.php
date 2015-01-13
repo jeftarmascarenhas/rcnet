@@ -8,7 +8,7 @@
 get_header(); ?>
 
 <?php 
-$the_segmentos = new Wp_Query(array(
+$the_segmentos = new WP_Query(array(
 		'post_type'   	 => 'rcnet_segmentos',
 		'post_not_in' 	 => array(get_the_id()),
 		'posts_per_page' => 6
@@ -73,11 +73,11 @@ $the_segmentos = new Wp_Query(array(
 
 
 <?php 
-	wp_reset_postdata();
 	endwhile;
 ?>
 
 <?php endif; ?>
+<?php wp_reset_postdata(); ?>
 
 
 

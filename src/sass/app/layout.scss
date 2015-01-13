@@ -1,10 +1,28 @@
 //Style default
+h1,h2,h3{
+	margin-top: 0;
+}
+.features{
+	padding: 20px 0px 90px 0px;
+}
 
+.title-sections{
+		text-transform: uppercase;
+		font-size: 2em;
+		padding: 0px 0px 5px 0px;
+		border-bottom: 2px solid #33a5c2;
+		display: inline-block;
+		margin-bottom: 38px;
+}	
 
 // Header style image banner
 #header{
 	// position:relative;
+
 }
+
+
+//Corousel BootStrap
 .carousel-caption{
 	top: 20%;
 	left: 12%;
@@ -23,7 +41,41 @@
 	}
 }
 
-//Custom style Bootstrap
+//Custom style Bootstrap and Nav Wordpress
+
+#menu-area-registrita{
+	padding: 12px 0px 0px 0px;
+	
+	li {
+
+	 a{
+		border: 1px solid $cinza-escuro;
+		padding: 2px 10px;
+		text-decoration: none;
+		@include transition(all, 0.2s, ease-in-out);
+		
+		&:hover{
+			background: $azul;
+			border:1px solid transparent;
+			color:$branco;
+		}
+	}
+
+	
+}
+	.title-area a{
+		text-transform: uppercase;
+		color:$cinza-escuro;
+		border: none;
+		&:hover{
+			background: none;
+			color: $preto;
+			border: none;
+		}
+	}
+
+}
+
 .navbar{
 	margin-bottom:0;
 }
@@ -33,19 +85,467 @@
 
 .navbar-menu-primary{
 	background:$branco;
-.navbar-brand,
-.navbar-nav li a {
-    line-height:100px;
-    height:100px;
+.navbar-brand{
+	 line-height:120px;
+    height:120px;
+}
+.navbar-nav li a{
+    // line-height:120px;
+    // height:120px;
     padding-top:0;
     font-size: 1.1em;
     font-weight: $light;
+    
+   
+    	padding: 30px 0px 8px 0px;
+    	margin-left: 15px;
+		margin-right: 15px;
+		font-weight: $light;
+		font-size: 1.4em;
+		color:$preto;
+    	@include transition(all, 0.1s, ease-in-out);
+
+    	&:hover{
+    		border-bottom: 3px solid $azul;
+    		color: $azul;
+    	}
+    
 }
 
 }
 .active{
 	a{
-		background:none;
+		background:none !important;
+		border-bottom: 3px solid $azul;
+		color: $azul !important;
 	}
 }
 
+//Mobile Icon menu bootstrap
+.navbar-default .navbar-toggle{
+	border-color: $branco;
+	.icon-bar{
+		background-color: $branco;
+	}
+}
+.navbar-toggle{
+	margin-top: 33px;
+	margin-right: 20px;
+	background-color: $azul;
+}
+
+// Solucoes
+#solucoes{
+	background: $cinza-claro;
+	a{
+		text-decoration: none;
+		color: $preto;
+	}
+
+	.box-solucoes{
+		background: $branco;
+		padding: 40px 8px;
+		@include transition(background, 0.3s, ease-in-out);
+		@include transition(box-shadow, 0.6s, ease-in-out);
+
+
+		a{
+			color: $preto;
+			@include transition(color, 0.4s, ease-in-out);
+
+			&:hover{
+				text-decoration: none;
+				color: $branco;
+			}
+		}
+
+		&:hover{
+			background: $azul !important;
+    		color: $branco;
+    		box-shadow: inset 0px 800px 2px transparentize($preto, 0.7);
+
+			.btn-saiba{
+				&:hover{
+				    background: $azul;
+    				border-color: $branco;
+    				color:$branco;
+    			}
+			}
+		}
+	}
+
+	article{
+		margin-bottom: 10px;
+	}
+
+}
+.btn-saiba{
+	border-radius: 0;
+	background: $azul;
+	color: $branco;
+	box-shadow: none;
+	border-color: $branco;
+	@include transition(all, 0.4s, ease);
+}
+
+#solucoes-category{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+//Accodion Solução
+.ac-container{
+	label{
+		position: relative;
+		z-index: 20;
+		padding: 5px 20px;
+		display: block;
+		cursor: pointer;
+		color:#777;
+		font-size: 1.2em;
+		font-weight: $normal;
+		border-bottom: 1px solid $cinza-claro;
+	}
+	
+	input{
+		display: none;
+	}
+	
+	input:checked + label, input:checked + label:hover{
+		color: #333;	
+	}
+
+	article{
+		margin-top: -1px;
+		overflow: hidden;
+		max-height: 0px;
+		position: relative;
+		z-index: 10px;
+		transition: height 0.3s ease-in-out;
+	}
+	
+	input:checked ~ article{
+		transition: max-height 0.5s ease-in-out;
+		max-height: 400px;
+	}
+}
+
+//Segmentos
+#segmentos{
+	h3 {
+		a{
+			text-decoration: none;
+			color: $preto-medio;
+			font-size: 1.1em;
+		}
+		span{
+			color: lighten($cinza-medio, 20%) ;
+			font-weight: 300;
+			font-size: 0.9em !important;
+		}
+	}
+}
+
+#segmento-sigle{
+	overflow: hidden;
+	position: relative;
+}
+
+#banner-segmentos{
+	overflow: hidden;
+	position: relative;
+	max-height: 561px;
+
+	figure{
+		width: 100%;
+		img{
+			width: 100%;
+		}
+	}
+
+	figcaption{
+		position: absolute;
+		top: 20%;
+		left: 8%;
+		color: $branco;
+		max-width: 800px;
+		h1{
+			font-size:3em;
+		}
+		p{
+			font-size:2em;
+			font-weight: $light;
+		}
+	}
+}
+
+//Diferenciais
+#diferenciais{
+	background: $azul-escuro;
+	h1{
+		color: $azul;
+		font-size: 1.6em;
+	}
+	p{
+		color:$branco;
+		font-size: 1.1em;
+		font-weight: $light;
+	}
+
+	article{
+		padding-bottom: 30px;
+	}
+}
+.check {
+    border: 1px solid #33A5C2;
+    position: relative;
+    padding: 30px;
+    border-radius: 100%;
+    display: inline-block;
+    transition:all 0.4s linear;
+
+	    &:after{
+		    content: '';
+		    position:absolute;
+		    top:15px;
+		    left: 37px;
+		    width: 1px;
+		    height:28px;
+		    transform: rotate(36deg);
+		    background: #33A5C2;
+	}   
+
+		&:before{
+		    content: '';
+		    position:absolute;
+		    top: 31px;
+		    left: 24px;
+		    width: 1px;
+		    height: 11px;
+		    transform: rotate(-51deg);
+		    background: #33A5C2;
+	}
+		
+}
+.diferencias-text{
+	
+	margin-bottom: 20px;
+
+	&:hover{
+		.check{
+	    	background: #33A5C2;
+	    	transform: scale(1.2);
+	    	
+	    	&:before, &:after{
+    			background:#ccc;
+			}
+		
+		}
+	}
+}
+
+
+   
+#dados-difereciais{
+	padding: 25px;
+	h2{
+		color: $azul;
+		font-size: 3.2em;
+		font-weight: $light;
+	}
+	p{
+		color:$branco;
+		font-weight: $light;
+	}
+
+}
+
+.divsao-border {
+    border-bottom:1px solid $branco;
+    border-left:1px solid $branco;
+    padding: 22px 0px;
+    
+    &:nth-child(1){
+    	border-left:none;
+	}
+	&:nth-child(3){
+    	border-left:none;
+    	border-bottom:none;
+	}
+	&:nth-child(4){
+    	border-bottom:none;
+	}
+
+	&:hover{
+		&:nth-child(1){
+	    	border-left:none;
+		}
+			&:nth-child(3){
+		    	border-left:none;
+		    	border-bottom:none;
+			}
+		&:nth-child(4){
+	    	border-bottom:none;
+		}
+	}
+
+}
+
+//Clientes e noticias
+#clientes-noticias{
+	width: 100%;
+
+	#clientes,#noticias{
+		min-height: 350px;
+		padding-top: 20px;
+	}
+}
+
+#clientes{
+	background: $cinza-claro;
+	
+	.image-clientes{
+		margin-bottom: 40px;
+	}
+}
+
+#noticias{
+	background: $cinza;
+	ul{
+		list-style-image: url(http://127.0.0.1/rcnet/wp-content/themes/rcnet/public/images/icon/next-icon.png);
+	}
+	h3{
+		font-size: 1.25em;
+	}
+}
+
+//Contato
+#form-info{
+	width:100%;
+	overflow: hidden;
+	background: $azul-escuro;
+	color: $branco;
+	padding: 40px 0;
+
+	h2,h3{
+		font-weight: $light;
+	}
+}
+
+#form-rcnet{
+	input[type="text"], input[type="email"]{
+		border-radius:0;
+	    background:none;
+	    padding-top: 25px;
+	    padding-bottom: 25px;
+	    color: $branco;
+	}
+	input[type="submit"]{
+	    background:none;
+	    border-radius:0;
+	    padding:10px 40px;
+	    border-color: $azul;
+	    color: $azul;		
+	}
+	textarea{
+		border-radius:0;
+	    background:none;
+	    padding-top: 25px;
+	    padding-bottom: 25px;
+	}
+}
+
+#sac-recnet{
+	
+	padding-top: 21px;
+
+	h2,h3{
+		color: $azul;
+		font-weight: $normal;	
+	}
+}
+
+
+//Footer
+#footer{
+	clear: both;
+	
+	article{
+		padding: 50px 30px;
+	}
+}
+
+#empresa-footer, #apoio-footer{
+	img{
+		margin: 15px 0 !important;
+	}
+}
+
+#empresa-footer{
+	background: $azul;
+	color:$branco;
+
+	img{
+		margin:5px 0;
+	}
+}
+
+#boletim-footer{
+	ol{
+		list-style: none;
+		padding: 0;
+		
+		li{
+			float: left;
+		}
+	}
+
+	input[type='email'], input[type='submit']{
+		border-radius: 0;
+	}
+
+	input[type='submit']{
+		background: $azul;
+		border: 1px solid $azul;
+		color: $branco;
+		@include transition(all, 0.2s, linear);
+		&:hover{
+			background: $azul-escuro;
+			color: $branco;
+		}
+	}
+}
+
+#contato-footer{
+	ul{
+		list-style: none;
+		padding: 0;
+
+		li{
+			margin-bottom: 18px;
+		}
+
+		i{
+			font-size: 1.5em;
+			color:$azul;
+		}
+	}
+}
+
+.redes-sociais a {
+	border: 1px solid $azul;
+	display: inline-block;
+	border-radius: 100%;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	@include transition(box-shadow, 0.8s, ease-in-out);	
+
+	&:hover{
+		box-shadow: inset 510px 0px 1px $azul;
+		i{
+			color: $branco !important;
+		}
+	}
+}

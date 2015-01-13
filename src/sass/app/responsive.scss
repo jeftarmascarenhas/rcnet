@@ -1,8 +1,62 @@
+@media (max-width: 765px) {
+.navbar-nav li a{
+	height: 50px;
+	line-height: 50px;
+	font-size: 1.2em;
+}
+
+
+.navbar-menu-primary .navbar-nav li a{
+		
+
+	&:hover{
+		border-bottom:0;
+	}
+}
+
+.active a{
+		border-bottom:0;
+	} 
+
+
+
+}//Fechamento da Media Query max-width: 768px
+
+
 @media (max-width: 991px) {
+
+
+.navbar-menu-primary .navbar-nav li a{
+		
+		margin-left: 10px;
+		margin-right: 10px;
+		font-size: 1.1em;
+}
+
+
+//Segmentos
+#banner-segmentos{
+
+	figcaption{
+		position: absolute;
+		top: 20%;
+		left: 8%;
+		color: $branco;
+		max-width: 800px;
+		h1{
+			font-size:2em;
+		}
+		p{
+			font-size:1.2em;
+			font-weight: $light;
+		}
+	}
+}
+
 
 }//Fechamento da Media Query max-width: 991px
 
-
+  
 @media (max-width: 1024px) {
 
 
